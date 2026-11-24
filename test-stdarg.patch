@@ -1,0 +1,12 @@
+diff --git a/dlls/amdxc64/tests/amdxc64.c b/dlls/amdxc64/tests/amdxc64.c
+index 6f29369ab41..1c7e43f2d6a 100644
+--- a/dlls/amdxc64/tests/amdxc64.c
++++ b/dlls/amdxc64/tests/amdxc64.c
+@@ -15,6 +15,7 @@
+  */
+ 
+ #define COBJMACROS
++#include <stdarg.h>
+ #include "ntstatus.h"
+ #define WIN32_NO_STATUS
+ #include "initguid.h"
