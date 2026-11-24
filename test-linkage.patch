@@ -1,0 +1,7 @@
+diff --git a/dlls/dwmapi/tests/Makefile.in b/dlls/dwmapi/tests/Makefile.in
+index 1cf8d1c9d6f..b7c246691e9 100644
+--- a/dlls/dwmapi/tests/Makefile.in
++++ b/dlls/dwmapi/tests/Makefile.in
+@@ -2 +2 @@
+-IMPORTS = dwmapi user32
++IMPORTS = dwmapi user32 gdi32

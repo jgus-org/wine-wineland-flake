@@ -1,0 +1,13 @@
+diff --git a/dlls/user32/tests/cursoricon.c b/dlls/user32/tests/cursoricon.c
+index 5ae69fece93..ad06d3e66be 100644
+--- a/dlls/user32/tests/cursoricon.c
++++ b/dlls/user32/tests/cursoricon.c
+@@ -562,7 +562,7 @@ static void test_child_process(void)
+     {
+         for (type = 0; type < 3; ++type)
+         {
+-            if (type == 2) cursor = LoadCursorA( NULL, IDC_ARROW );
++            if (type == 2) cursor = LoadCursorA( NULL, (LPCSTR)IDC_ARROW );
+             else
+             {
+                 cursorInfo.xHotspot = 3;

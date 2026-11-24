@@ -1,0 +1,14 @@
+diff --git a/dlls/crypt32/unixlib.c b/dlls/crypt32/unixlib.c
+index 06e3b4c..f2288c6 100644
+--- a/dlls/crypt32/unixlib.c
++++ b/dlls/crypt32/unixlib.c
+@@ -927,2 +927,3 @@ static void load_root_certs(void)
+ {
+     const char *additional_dir;
++    const char *nix_cert_file;
+@@ -964,2 +965,5 @@ static void load_root_certs(void)
+     for (i = 0; i < ARRAY_SIZE(CRYPT_knownLocations) && list_empty(&root_cert_list); i++)
+         import_certs_from_path( CRYPT_knownLocations[i], TRUE );
++
++    if ((nix_cert_file = getenv( "NIX_SSL_CERT_FILE" )))
++        import_certs_from_path( nix_cert_file, TRUE );
