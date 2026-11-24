@@ -1,5 +1,6 @@
+# Auto-managed by `nix run .#update-version`. Manual edits will be overwritten by the next bump.
 {
-  sourceHash = "sha256-vxuTyDcpsEF7ZwMlssNNYpnFdOb1wv/JTgynecJ2BoQ=";
-  sourceRev = "0974251a7595b1b5ccd2b6681524a606ca031f3b";
-  version = "0-unstable-2026-09-26";
+  sourceHash = "sha256-4Va+yK7EHyOB+tTiBXKW6un+uCljbs9QmiKhATf9iZw=";
+  sourceRev = "3309deb92404c9155016436e1d3fac141d5838b2";
+  version = "0.dev20261124+g3309deb9";
 }

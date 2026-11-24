@@ -53,7 +53,9 @@
               ./cert-path.patch
               ./gcc-15.patch
               ./standalone-user.patch
+              ./test-initguid.patch
               ./test-linkage.patch
+              ./test-stdarg.patch
             ];
             pname = "wine-wineland";
             postPatch = (oldAttrs.postPatch or "") + ''

@@ -1,0 +1,21 @@
+diff --git a/dlls/mfplat/tests/d3d12.c b/dlls/mfplat/tests/d3d12.c
+index ae6f3a92c1b..5943203d7c4 100644
+--- a/dlls/mfplat/tests/d3d12.c
++++ b/dlls/mfplat/tests/d3d12.c
+@@ -22,7 +22,6 @@
+ #include "mftransform.h"
+ #include "mferror.h"
+ #include "wine/test.h"
+-#include "initguid.h"
+ #include "d3d12.h"
+ #undef EXTERN_GUID
+ #define EXTERN_GUID DEFINE_GUID
+@@ -35,7 +34,7 @@ static HRESULT (WINAPI *pMFCreateDXGISurfaceBuffer)(REFIID, IUnknown *, UINT, BO
+ static HRESULT (WINAPI *pMFCreateVideoSampleAllocatorEx)(REFIID, void **);
+ static HRESULT (WINAPI *pMFCreateSampleCopierMFT)(IMFTransform **);
+ 
+-DEFINE_GUID(resource_lifetime_key, 0x3f9fc996, 0xb914, 0x4fb9, 0xa3, 0x17, 0xde, 0x24, 0x65, 0x9d, 0xd4, 0xc2);
++static const GUID resource_lifetime_key = { 0x3f9fc996, 0xb914, 0x4fb9, { 0xa3, 0x17, 0xde, 0x24, 0x65, 0x9d, 0xd4, 0xc2 } };
+ 
+ struct resource_lifetime
+ {
